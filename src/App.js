@@ -39,7 +39,7 @@ const App=()=>{
   return(
     <div>
       <Menu>
-        <Menu.Menu.Item>Hakkımda</Menu.Menu.Item>
+        <Menu.Item>Hakkımda</Menu.Item>
 <Menu.Item>İletişim</Menu.Item>
 <Menu.Item className="active">Blog</Menu.Item>
 <Menu.Item>Makaleler</Menu.Item>
