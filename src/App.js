@@ -40,18 +40,14 @@ const App=()=>{
     <div>
       <Menu>
         <Menu.Item>Hakkımda</Menu.Item>
-<Menu.Item>İletişim</Menu.Item>
-<Menu.Item className="active">Blog</Menu.Item>
-<Menu.Item>Makaleler</Menu.Item>
-<Menu.Item>Dersler</Menu.Item>
+        <Menu.Item>İletişim</Menu.Item>
+        <Menu.Item className="active">Blog</Menu.Item>
+        <Menu.Item>Makaleler</Menu.Item>
+        <Menu.Item>Dersler</Menu.Item>
       </Menu>
-      <nav className = "menu"
-      ref = {
-        ref
-      } >
-        {Object.values(position).length>0 && 
-        < div className = "divider"
-        style = {
+      <nav className = "menu" ref = {ref} >
+        {Object.values(position).length>0 && (
+        <div className = "divider" style = {
           {
             "--left": position.left + "px",
             "--top": position.top + "px",
@@ -59,12 +55,7 @@ const App=()=>{
             "--height": position.height + "px"
           }
         }
-        />}
-      
-      
-      
-      
-      
+        />)}
       </nav>
     </div>
   )
