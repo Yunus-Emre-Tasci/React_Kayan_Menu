@@ -11,10 +11,10 @@ const Menu=({children})=>{
     );
 }
 
-Menu.Item=({children})=>{
+export const MenuItem=({children})=>{
     const {setPosition}=useContext(MenuContext)
     const clickHandle=(e)=>{
-        const { top, width, height } = e.target?.getBoundingClientRect();
+        const { top, width, height } = e.target.getBoundingClientRect();
         const left = e.target.offsetLeft;
         setPosition({
           left,

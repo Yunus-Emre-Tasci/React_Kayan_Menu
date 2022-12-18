@@ -1,6 +1,8 @@
 import { useEffect } from "react"
 import { useRef, useState } from "react";
-import Menu from "./Menu.jsx";
+import Menu, {
+  MenuItem
+} from "./Menu.jsx";
 
 
 
@@ -26,8 +28,8 @@ const App=()=>{
       top,
       width,
       height
-    } = el?.getBoundingClientRect()
-    const left = el?.offsetLeft
+    } = el.getBoundingClientRect()
+    const left = el.offsetLeft
     setPosition({
       left,
       top,
@@ -39,11 +41,11 @@ const App=()=>{
   return(
     <div>
       <Menu>
-        <Menu.Item>Hakkımda</Menu.Item>
-        <Menu.Item>İletişim</Menu.Item>
-        <Menu.Item className="active">Blog</Menu.Item>
-        <Menu.Item>Makaleler</Menu.Item>
-        <Menu.Item>Dersler</Menu.Item>
+        <MenuItem>Hakkımda</MenuItem>
+        <MenuItem>İletişim</MenuItem>
+        <MenuItem className="active">Blog</MenuItem>
+        <MenuItem>Makaleler</MenuItem>
+        <MenuItem>Dersler</MenuItem>
       </Menu>
       <nav className = "menu" ref = {ref} >
         {Object.values(position).length>0 && (
