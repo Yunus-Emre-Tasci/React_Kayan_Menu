@@ -26,8 +26,8 @@ const App=()=>{
       top,
       width,
       height
-    } = el.getBoundingClientRect()
-    const left = el.offsetLeft
+    } = el?.getBoundingClientRect()
+    const left = el?.offsetLeft
     setPosition({
       left,
       top,
